@@ -10,7 +10,7 @@ CREATE TABLE tb_reservado(
     placa VARCHAR(7) NOT NULL,
     ano VARCHAR(4) NOT NULL,
     km VARCHAR(7) NOT NULL,
-    dataum DATETIME,
-    datadois DATETIME,
+    dataum VARCHAR(20),
+    datadois VARCHAR(20),
     valor INT(7) NOT NULL
 )

@@ -73,19 +73,7 @@ if (isset($_GET['nome']) && $_GET['nome'] != '') {
 include "conexao.php";
 
 if(isset($reserva)){
-$sqlInserir = "INSERT INTO tb_reservado(
-    nome,
-    tel,
-    habilitacao,
-    marca,
-    modelo,
-    cor,
-    placa,
-    ano,
-    km,
-    dataum,
-    datadois,
-    valor
+$sqlInserir = "INSERT INTO tb_reservado(nome, tel, habilitacao, marca, modelo, cor, placa, ano, km, dataum, datadois, valor
 ) VALUES(
     '{$reserva['nome']}',
     '{$reserva['tel']}',
@@ -102,12 +90,13 @@ $sqlInserir = "INSERT INTO tb_reservado(
 );";
 
 
-echo "<pre>";
-print_r ($sqlInserir);
-echo "</pre>";
 
+/*print_r ($sqlInserir);
+
+
+exit();*/
 # Para execução
 mysqli_query ($conexao , $sqlInserir);
 }
-include "template.php";
+include "index.php";
 ?>

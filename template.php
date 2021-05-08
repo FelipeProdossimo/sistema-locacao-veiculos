@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -123,25 +122,25 @@
             <span class="input-group-addon">,00</span>
         </div>
         <br>
-            <button type="submit" class="btn btn-default">RESERVAR</button>
+            <button type="submit" class="btn btn-default" method="post">RESERVAR</button>
         </div>
 
     <table class="table">
         <thead>
-            <ul class="list-group">
-                <li class="list-group-item">Nome:</li>
-                <li class="list-group-item">Telefone:</li>
-                <li class="list-group-item">Habilitação</li>
-                <li class="list-group-item">Marca:</li>
-                <li class="list-group-item">Modelo:</li>
-                <li class="list-group-item">Cor:</li>
-                <li class="list-group-item">Placa:</li>
-                <li class="list-group-item">Ano:</li>
-                <li class="list-group-item">Km:</li>
-                <li class="list-group-item">Data de entrada:</li>
-                <li class="list-group-item">Data de saída:</li>
-                <li class="list-group-item">Valor:</li>
-            </ul>
+            <tr>
+                <th>Nome:</th>
+                <th>Telefone:</th>
+                <th>Habilitação</th>
+                <th>Marca:</th>
+                <th>Modelo:</th>
+                <th>Cor:</th>
+                <th>Placa:</th>
+                <th>Ano:</th>
+                <th>Km:</th>
+                <th>Data de entrada:</th>
+                <th>Data de saída:</th>
+                <th>Valor:</th>
+            </tr>
         </thead>
         <tbody>
             <?php
@@ -158,38 +157,24 @@
                 $listaReservas[] = $reserva;
             }
 
-            foreach ($listaReservas as $reserva) : ?>
-                <ul>
-                    <li><?php echo $reserva['nome']; ?></li>
-                    <li><?php echo $reserva['tel']; ?></li>
-                    <li><?php echo $reserva['habilitacao']; ?></li>
-                    <li><?php echo $reserva['marca']; ?></li>
-                    <li><?php echo $reserva['modelo']; ?></li>
-                    <li><?php echo $reserva['cor']; ?></li>
-                    <li><?php echo $reserva['placa']; ?></li>
-                    <li><?php echo $reserva['ano']; ?></li>
-                    <li><?php echo $reserva['km']; ?></li>
-                    <li><?php echo $reserva['dataum']; ?></li>
-                    <li><?php echo $reserva['datadois']; ?></li>
-                    <li><?php echo $reserva['valor']; ?></li>
-                </ul>
+            foreach ($listaReservas as $reserva): ?>
+                <tr>
+                    <td><?php echo $reserva['nome']; ?></td>
+                    <td><?php echo $reserva['tel']; ?></td>
+                    <td><?php echo $reserva['habilitacao']; ?></td>
+                    <td><?php echo $reserva['marca']; ?></td>
+                    <td><?php echo $reserva['modelo']; ?></td>
+                    <td><?php echo $reserva['cor']; ?></td>
+                    <td><?php echo $reserva['placa']; ?></td>
+                    <td><?php echo $reserva['ano']; ?></td>
+                    <td><?php echo $reserva['km']; ?></td>
+                    <td><?php echo $reserva['dataum']; ?></td>
+                    <td><?php echo $reserva['datadois']; ?></td>
+                    <td><?php echo $reserva['valor']; ?></td>
+                </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
